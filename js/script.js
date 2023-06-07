@@ -8,6 +8,7 @@ const invitation_array = guest.map((guest, i) => {
 console.log(invitation_array);
 
 
+
 // SNACK 2
 const students = [
     {
@@ -60,3 +61,47 @@ console.log(super_students);
 const ultra_students = students.filter((student) => student.grades > 70 && student.id > 120);
 
 console.log(ultra_students);
+
+
+
+// SNACK 3
+const arrayBici = [
+    {
+        nome: 'Bianca',
+        peso: 20
+    },
+    {
+        nome: 'Rossa',
+        peso: 25
+    },
+    {
+        nome: 'Nera',
+        peso: 15
+    },
+    {
+        nome: 'Viola',
+        peso: 17
+    },
+    {
+        nome: 'Gialla',
+        peso: 30
+    },
+    {
+        nome: 'Arancione',
+        peso: 18
+    },
+];
+
+let biciLeggera = arrayBici[0];
+
+arrayBici.forEach((element) => {
+    if(element.peso < biciLeggera.peso){
+        biciLeggera = element;
+    }
+});
+
+console.log(biciLeggera);
+
+let {nome, peso} = biciLeggera;
+
+console.log(`La bici piu' leggera e' la ${nome} e pesa ${peso}`);
