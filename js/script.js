@@ -105,3 +105,82 @@ console.log(biciLeggera);
 let {nome, peso} = biciLeggera;
 
 console.log(`La bici piu' leggera e' la ${nome} e pesa ${peso}`);
+
+
+
+// SNACK 4
+function generateRandomNumber(min, max){
+    return Math.floor(Math.random() * (max - min + 1) - min);
+}
+
+const squadre = [
+    {
+        nome: 'Milan',
+        punti: 0,
+        falli: 0
+    },
+    {
+        nome: 'Juventus',
+        punti: 0,
+        falli: 0
+    },
+    {
+        nome: 'Inter',
+        punti: 0,
+        falli: 0
+    },
+    {
+        nome: 'Roma',
+        punti: 0,
+        falli: 0
+    },
+    {
+        nome: 'Lazio',
+        punti: 0,
+        falli: 0
+    },
+    {
+        nome: 'Napoli',
+        punti: 0,
+        falli: 0
+    },
+    {
+        nome: 'Fiorentina',
+        punti: 0,
+        falli: 0
+    },
+    {
+        nome: 'Torino',
+        punti: 0,
+        falli: 0
+    },
+    {
+        nome: 'Sassuolo',
+        punti: 0,
+        falli: 0
+    },
+    {
+        nome: 'Monza',
+        punti: 0,
+        falli: 0
+    }
+];
+
+squadre.forEach((element) => {
+    element.punti = generateRandomNumber(1, 90);
+    element.falli = generateRandomNumber(1, 20);
+})
+
+console.log(squadre)
+
+const newTeams = squadre.map((element) => {
+    const {nome, falli} = element;
+    let obj = {
+        nome,
+        falli
+    }
+
+    return obj;
+});
+
+console.log(newTeams);
